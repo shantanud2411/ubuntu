@@ -13,8 +13,8 @@ EOF
 
     sudo sysctl --system
     sudo apt install curl -y
-    curl -fsSL https://get.docker.com -o get-docker.sh
-    sh get-docker.sh 
+    sudo curl -fsSL https://get.docker.com -o get-docker.sh
+    sudo sh get-docker.sh 
     sudo sed -i 's/disabled/enable/' /etc/containerd/config.toml
     sudo sed -i 's/cri/containerd/' /etc/containerd/config.toml
    sudo systemctl restart docker
